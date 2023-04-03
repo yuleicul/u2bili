@@ -126,7 +126,7 @@ async function main() {
 
   // 视频描述
   await page.click("div.ql-editor[data-placeholder^=填写更全]")
-  await page.keyboard.type(`u2bili自动上传\n${meta["description"]}`)
+  await page.keyboard.type(`${meta["description"]}`)
 
   await page.fill("input[placeholder*=标题]", meta["title"])
 
