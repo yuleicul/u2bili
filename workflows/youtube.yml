@@ -1,11 +1,14 @@
 on:
   youtube:
     channel_id:
-      - UCwXdFgeE9KYzlDdR7TG9cMw #Flutter
-      - UCsBjURrPoezykLs9EqgamOA #Fireship
-      - UCP7uiEZIqci43m22KDl0sNw #Kotlin by JetBrains
+      - UCvqfTexdjchPEa7j-6SPM-w #Tejas Kumar
+      - UCFbNIlppjAuEX4znoulh0Cw #Web Dev Simplified
+      - UCzoVCacndDCfGDf41P-z0iA #JSConf
+      - UCK94nZHoLfxXISrVflJqK5Q #tylerlaceby
+      - UC80PWRj_ZU8Zu0HSMNVwKWw #Codevolution
+      - UC0qiieVBpjA6YODgIFf6Afg #JSer
     playlist_id:
-      - PL0lo9MOBetEFCNnxB1uZcDGcrPO1Jbpz8 #GitHub Changelog
+      # - PL0lo9MOBetEFCNnxB1uZcDGcrPO1Jbpz8 #GitHub Changelog
     config:
       filterScript: |
         return new Date() - 24 * 3600 * 1000 < new Date(item.pubDate) //Recent 24 hours Only
