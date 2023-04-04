@@ -7,8 +7,14 @@ on:
       - UCK94nZHoLfxXISrVflJqK5Q #tylerlaceby
       - UC80PWRj_ZU8Zu0HSMNVwKWw #Codevolution
       - UC0qiieVBpjA6YODgIFf6Afg #JSer
+      - UC6vRUjYqDuoUsYsku86Lrsw #Jack Herrington
+      - UCswG6FSbgZjbWtdf_hMLaow #Matt Pocock
+      - UCyU5wkjgQYGRB0hIHMwm2Sg #LevelUpTuts
+      - UC29ju8bIPH5as8OGnQzwJyA #Traversy Media
+      - UCbRP3c757lWg9M-U7TyEkXA #Theo - t3․gg
+      - UCMm15RFnHUvM-aSc50e7R9A #CoderOne
     playlist_id:
-      # - PL0lo9MOBetEFCNnxB1uZcDGcrPO1Jbpz8 #GitHub Changelog
+      - PL1Ze1XNGMHio3IlNy_7DAXR1ftFA_hFZU #Feed for myself
     config:
       filterScript: |
         return new Date() - 24 * 3600 * 1000 < new Date(item.pubDate) //Recent 24 hours Only
