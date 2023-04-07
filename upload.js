@@ -121,7 +121,7 @@ async function main() {
 
   // 创建标签
   await page.click("input[placeholder*=创建标签]")
-  await page.keyboard.type(meta["uploader"])
+  await page.keyboard.type("前端")
   await page.keyboard.down("Enter")
 
   // 视频描述
@@ -130,7 +130,7 @@ async function main() {
 
   await page.fill("input[placeholder*=标题]", meta["title"])
 
-  await uploadSubtitles(page, meta)
+  // await uploadSubtitles(page, meta)
 
   await page
     .waitForSelector('text="更改封面"', {
