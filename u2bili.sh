@@ -15,10 +15,10 @@ yt-dlp "$yturl" -J > "${downloadPath}$vid.json" || exit 0 # exit if prompt event
 duration=$(cat "${downloadPath}$vid.json"| jq .duration)
 
 # Set max duration here, default is 30min
-if [ "$duration" -ge 1800 ]; then
-    echo "Video longer than 30 min,skip..."
-    exit 0
-fi
+# if [ "$duration" -ge 1800 ]; then
+#     echo "Video longer than 30 min,skip..."
+#     exit 0
+# fi
 
 set -x # Show following commands
 yt-dlp "$yturl" --quiet --write-subs --all-subs --embed-subs -o "${downloadPath}%(id)s.%(ext)s" --exec "node upload.js ${downloadPath}$vid.json"
