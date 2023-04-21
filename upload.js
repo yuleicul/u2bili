@@ -148,7 +148,7 @@ async function main() {
       console.log("上传时间过长")
     })
 
-  await page.click('text="立即投稿"')
+  await page.click('text="存草稿"')
 
   await page.waitForTimeout(3000)
   await page.close()
