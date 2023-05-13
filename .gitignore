@@ -1,6 +1,7 @@
 .env
 meta.json
 downloads/
+videos/
 # Logs
 logs
 *.log

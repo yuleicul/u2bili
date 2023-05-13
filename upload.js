@@ -128,7 +128,7 @@ async function main() {
   await page.click("div.ql-editor[data-placeholder^=填写更全]")
   await page.keyboard.type(`${meta["description"]}`)
 
-  await page.fill("input[placeholder*=标题]", meta["title"])
+  await page.fill("input[placeholder*=标题]", `【${meta["uploader"]}】${meta["title"]}`)
 
   // await uploadSubtitles(page, meta)
 
