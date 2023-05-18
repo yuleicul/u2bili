@@ -1,4 +1,5 @@
 .env
+package-lock.json
 meta.json
 downloads/
 videos/

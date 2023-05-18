@@ -61,6 +61,10 @@ async function main() {
               name: "SHOW_GUIDE",
               value: "1",
             },
+            {
+              name: "bili_videoup_submit_auto_tips",
+              value: "1"
+            }
           ],
         },
       ],
@@ -130,7 +134,7 @@ async function main() {
 
   await page.fill("input[placeholder*=标题]", `【${meta["uploader"]}】${meta["title"]}`)
 
-  // await uploadSubtitles(page, meta)
+  await uploadSubtitles(page, meta)
 
   await page
     .waitForSelector('text="更改封面"', {
@@ -148,6 +152,7 @@ async function main() {
       console.log("上传时间过长")
     })
 
+  // await page.click('text="立即投稿"')
   await page.click('text="存草稿"')
 
   await page.waitForTimeout(3000)
