@@ -1,12 +1,12 @@
 name: Daily update
-concurrency: 
+concurrency:
   group: actionsflow
 permissions:
   actions: read
   contents: read
 on:
   schedule:
-    - cron: "0 4 * * *" # GMT+8 12:00
+    - cron: "0 14 * * *" # GMT+8 22:00
   repository_dispatch:
   workflow_dispatch:
     inputs:

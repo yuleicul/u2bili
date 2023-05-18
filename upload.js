@@ -125,14 +125,14 @@ async function main() {
 
   // 创建标签
   await page.click("input[placeholder*=创建标签]")
-  await page.keyboard.type(meta["uploader"])
+  await page.keyboard.type("前端")
   await page.keyboard.down("Enter")
 
   // 视频描述
   await page.click("div.ql-editor[data-placeholder^=填写更全]")
-  await page.keyboard.type(`u2bili自动上传\n${meta["description"]}`)
+  await page.keyboard.type(`${meta["description"]}`)
 
-  await page.fill("input[placeholder*=标题]", meta["title"])
+  await page.fill("input[placeholder*=标题]", `【${meta["uploader"]}】${meta["title"]}`)
 
   await uploadSubtitles(page, meta)
 
@@ -152,7 +152,8 @@ async function main() {
       console.log("上传时间过长")
     })
 
-  await page.click('text="立即投稿"')
+  // await page.click('text="立即投稿"')
+  await page.click('text="存草稿"')
 
   await page.waitForTimeout(3000)
   await page.close()

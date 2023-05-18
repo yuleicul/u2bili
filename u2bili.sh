@@ -15,8 +15,9 @@ yt-dlp "$yturl" -J > "${downloadPath}$vid.json" || exit 0 # exit if prompt event
 duration=$(cat "${downloadPath}$vid.json"| jq .duration)
 
 # Set max duration here, default is 30min
-if [ "$duration" -ge 1800 ]; then
-    echo "Video longer than 30 min,skip..."
+# if [ "$duration" -ge 1800 ]; then
+if [ "$duration" -ge 7200 ]; then
+    echo "Video longer than 120 min,skip..."
     exit 0
 fi
 
