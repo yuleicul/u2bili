@@ -195,7 +195,8 @@ async function vtt2srt(path) {
 
 async function uploadSubtitles(page, meta) {
   // 寻找中文字幕和英文字幕
-  const langCodes = Object.keys(meta["subtitles"])
+  // const langCodes = Object.keys(meta["subtitles"])
+  const langCodes = Object.keys(meta["automatic_captions"])
   const enSub = langCodes.find((code) => code.startsWith("en"))
   const zhSub = langCodes.find((code) => code.startsWith("zh-Hans"))
 

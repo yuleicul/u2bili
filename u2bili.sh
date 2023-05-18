@@ -22,4 +22,4 @@ if [ "$duration" -ge 7200 ]; then
 fi
 
 set -x # Show following commands
-yt-dlp "$yturl" --quiet --write-subs --all-subs --embed-subs --write-thumbnail -o "${downloadPath}%(id)s.%(ext)s" --exec "node upload.js ${downloadPath}$vid.json"
+yt-dlp "$yturl" --quiet --write-thumbnail --write-auto-subs --sub-langs en,zh-Hans --sub-format srt  -o "${downloadPath}%(id)s.%(ext)s" --exec "node upload.js ${downloadPath}$vid.json"
